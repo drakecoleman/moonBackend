@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -26,7 +27,7 @@ app.post("/", (req, res) => {
       host: "smtp.gmail.com", // hostname
       auth: {
         user: "moonstarcodemail@gmail.com",
-        pass: "Moon_2021!",
+        pass: process.env.PASSWORD_PASS,
       },
     });
 
