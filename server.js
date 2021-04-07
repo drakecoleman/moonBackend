@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.listen(8000, () => {
+app.listen(8080, () => {
   console.log("Server Connected");
 });
 app.get("/", (req, res) => {
@@ -27,7 +27,7 @@ app.post("/", (req, res) => {
       host: "smtp.gmail.com", // hostname
       auth: {
         user: "moonstarcodemail@gmail.com",
-        pass: process.env.PASSWORD_PASS,
+        pass: "Moon_2021!",
       },
     });
 
